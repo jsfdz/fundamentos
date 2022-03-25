@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducción a HTML</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/stackoverflow-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <title>HTML5 Logo</title>
+          <!-- <path d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"/> -->
+          <path fill="#e44d26" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512" />
+          <path fill="#f16529" d="M256 480.5V131H404.3L376 447" />
+          <path fill="#ebebeb"
+            d="M142 176.3h114v45.4h-64.2l4.2 46.5h60v45.3H154.4M156.4 336.3H202l3.2 36.3 50.8 13.6v47.4l-93.2-26" />
+          <path fill="#fff"
+            d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8" />
+        </svg>
+      </div>
+      <div class="title-heading">
+        <h1 class="title">Introducción a HTML</h1>
+        <h2 class="subtitle"><em>Fundamentos del Desarrollo Web</em></h2>
+      </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="section">
+      <div class="content">
+        <h2>HTML</h2>
+        <p>👉🏻(del inglés HyperText Markup Language) no es un lenguaje de programación. Es un lenguaje de marcado que
+          le dice a los navegadores web cómo estructurar las páginas web que estás visitando. Puede ser tan complejo o
+          tan simple como desee el desarrollador web.</p>
+
+        <p>Una <code>etiqueta</code> es una palabra clave que nos permite definir un elemento en un archivo HTML.</p>
+
+        <p>Ejemplo de etiqueta:</p>
+        <pre>
+            <code class="html">&lt;tipo_de_elemento&gt;</code>
+          </pre>
+
+        <p>La mayoria de las etiquetas de HTML tienen una <code><em>&lt;etiqueta_de_apertura&gt;</em></code> que
+          abre un elemento y una
+          <code><em>&lt;/etiqueta_de_cierre&gt;</em></code> que cierra un
+          elemento.
+        </p>
+
+        <p>Un <code>Elemento</code> es un tipo de componente que podemos utilizar para encerrar, delimitar o marcar
+          diferentes partes del contenido para hacer que aparezcan de una cierta manera, o actúen de determinada forma
+          en el HTML.</p>
+
+        <pre>
+          <code class="html">&lt;elemento&gt; contenido &lt;/elemento&gt;</code>
+        </pre>
+
+        <p>Por ejemplo:</p>
+
+        <pre>
+            <code class="html">&lt;p&gt; esto es un elemento de tipo párrafo &lt;/p&gt;</code>
+          </pre>
+      </div>
+
+      <div class="content">
+        <h2>🚀 Estructura Básica de HTML</h2>
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Titulo&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+
+      <div class="content">
+        <pre>
+          <code class="html">&lt;!DOCTYPE html&gt;</code>
+        </pre>
+        <p>Declaración del tipo de documento es una instrucción especial que va al inicio de nuestro
+          documento HTML y que permite al navegador entender qué versión de HTML estamos utilizando.</p>
+
+        <pre>
+            <code class="html">&lt;html lang="es"&gt;</code>
+          </pre>
+        <p>Representa la raíz de un documento HTML (root element). El resto de elementos descienden de este elemento.
+          <span class="stamp is-tag">etiqueta</span>
+        </p>
+        <p>El atributo <code>lang</code> lo usamos para definir el lenguaje en que están escritos los elementos, o el
+          lenguaje
+          en el cual deberían de estar escritos.</p>
+
+        <blockquote class="is-info">
+          <p>
+            <span>🤓 </span> Los <code><em>atributos</em></code> de HTML son un modificador de un tipo de elemento de
+            HTML, es decir, son palabras especiales
+            utilizadas dentro de la etiqueta de apertura, para controlar el comportamiento del elemento.
+          </p>
+        </blockquote>
+
+        <pre>
+                <code class="html">&lt;head&gt;</code>
+              </pre>
+        <p>Provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y
+          hojas de estilos. No es visible en la página. <span class="stamp is-tag">etiqueta</span></p>
+
+        <pre>
+            <code class="html">&lt;meta charset="UTF-8"&gt;</code>
+          </pre>
+
+        <p>El atributo <code>charset</code> especifíca el tipo de caracteres que se utilizan en el documento. <span
+            class="stamp is-atribute">atributo</span></p>
+
+        <pre>
+          <code class="html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+        </pre>
+
+        <p>El atributo <code>viewport</code> especifíca el tamaño
+          de la ventana del navegador. Importante para hacer nuestras páginas responsivas. <span
+            class="stamp is-atribute">atributo</span></p>
+
+        <pre>
+            <code class="html">&lt;title&gt;Título&lt;/title&gt;</code>
+          </pre>
+
+        <p>El atributo <code>title</code> especifíca el título del documento. <span
+            class="stamp is-atribute">atributo</span></p>
+
+        <p>Podemos agregar etiquetas adicionales como <code
+            class="html">&lt;meta name="description" content="Descripción del documento"&gt;</code> con el atributo
+          <code>description</code> que especifíca una descripción del documento
+        </p>
+
+        <p>o <code class="html">&lt;link rel="icon" href="favicon.ico"&gt;</code> para mostrar el icono del documento en
+          la pestaña del navegador.</p>
+
+        <p>Por último el elemento <code>body</code> representa el cuerpo del documento. <span
+            class="stamp is-tag">etiqueta</span></p>
+
+        <pre>
+            <code class="html">&lt;body&gt;</code>
+        </pre>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <div class="content">
+        <h2>👉🏻 Elementos en bloque o en línea</h2>
+        <p>Los elementos en HTML usualmente son elementos "en bloque" o elementos "en línea".</p>
+
+        <p>Por ejemplo:</p>
+        <ul>
+          <li><code>div:</code>
+            <div class="inline">Etiqueta para contenido en bloque</div>
+          </li>
+          <li><code>span:</code> <span>Etiqueta para contenido en línea</span></li>
+        </ul>
+
+        <p>Un elemento <code>en bloque</code> ocupa todo el espacio de su elemento padre (contenedor), creando así un
+          "bloque"</p>
+        <p>Un elemento <code>en línea</code> ocupa sólo el espacio delimitado por las etiquetas que definen el elemento
+          en línea.</p>
+
+        <p>Hay un par de diferencias clave entre los elementos en bloque y elementos en línea:</p>
+        <ul>
+          <li>Formateo</li>
+          <li>Modelo de contenido</li>
+        </ul>
+
+        <p>Por ejemplo:</p>
+        <p>Elementos en bloque</p>
+        <ul>
+          <li>De forma predeterminada, los elementos de bloque comienzan en una nueva línea, pero los elementos en línea
+            pueden
+            comenzar en cualquier parte de una línea.</li>
+          <li>En general, los elementos en bloque pueden contener elementos en línea y otros elementos en bloque.
+            Inherente
+            a
+            esta distinción estructural es la idea de que los elementos en bloque crean estructuras "más grandes" que
+            los
+            elementos en línea.</li>
+        </ul>
+        <p><a href="https://developer.mozilla.org/es/docs/Web/HTML/Block-level_elements" target="_blank">Ver listado de
+            elementos
+            en bloque</a></p>
+
+
+        <p>Elementos en línea</p>
+        <ul>
+          <li>De forma predeterminada, los elementos en línea no comienzan con la nueva línea.</li>
+          <li>En general, los elementos en línea pueden contener únicamente los datos y otros elementos en línea.</li>
+        </ul>
+        <p><a href="https://developer.mozilla.org/es/docs/Web/HTML/Inline_elements" target="_blank">Ver listado de
+            elementos
+            en línea</a></p>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <div class="content">
+        <h2>👉🏻 Encabezados</h2>
+        <p>Los encabezados son elementos de tipo <code>h1</code> a <code>h6</code> que se utilizan para definir
+          el título de una página web.</p>
+
+        <p>Por ejemplo:</p>
+        <ul>
+          <li><code>h1:</code>
+            <h1 class="inline">Encabezado h1</h1>
+          </li>
+          <li><code>h2:</code>
+            <h2 class="inline">Encabezado h2</h2>
+          </li>
+          <li><code>h3:</code>
+            <h3 class="inline">Encabezado h3</h3>
+          </li>
+          <li><code>h4:</code>
+            <h4 class="inline">Encabezado h4</h4>
+          </li>
+          <li><code>h5:</code>
+            <h5 class="inline">Encabezado h5</h5>
+          </li>
+          <li><code>h6:</code>
+            <h6 class="inline">Encabezado h6</h6>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>👉🏻 Otras Etiquetas</h2>
+        <p>Etiquetas semánticas:</p>
+        <ul>
+          <li><code>p:</code>
+            <p class="inline">Párrafo</p>
+          </li>
+          <li><code>strong:</code> <strong>Etiqueta para texto en negrita</strong></li>
+          <li><code>em:</code> <em>Etiqueta para texto en cursiva</em></li>
+          <li><code>ins:</code> <ins>Etiqueta para texto subrayado</ins></li>
+          <li><code>strike:</code> <strike>Etiqueta para texto tachado</strike></li>
+          <li><code>mark:</code> <mark>Etiqueta para marcado</mark></li>
+          <li><code>small:</code> <small>Etiqueta para texto pequeño</small></li>
+          <li><code>a:</code> <a href="https://www.google.com" target="_blank">Etiqueta para enlazar a una URL</a></li>
+        </ul>
+
+        <p>Etiquetas no semánticas:</p>
+        <ul>
+          <li><code>span:</code> <span>Etiqueta para texto</span></li>
+          <li><code>b:</code> <b>Etiqueta para texto en negrita</b></li>
+          <li><code>i:</code> <i>Etiqueta para texto en cursiva</i></li>
+          <li><code>u:</code> <u>Etiqueta para subrayado</u></li>
+          <li><code>s:</code> <s>Etiqueta para texto tachado</s></li>
+          <li><code>sup:</code> x<sup>2</sup> Etiqueta para superíndice</li>
+          <li><code>sub:</code> H<sub>2</sub>O Etiqueta para subíndice</li>
+        </ul>
+
+        <p>Etiquetas para citar</p>
+        <ul>
+          <li><code>blockquote:</code> Crea citas en bloque</li>
+          <li><code>cite:</code> <cite>- Marca una referencia a una fuente, o el autor de un texto citado.</cite></li>
+        </ul>
+        <blockquote>
+          <p>El único modo de hacer un gran trabajo es amar lo que haces<br>
+            <cite>- Steve Jobs</cite>
+          </p>
+        </blockquote>
+      </div>
+
+      <div class="content">
+        <h2>👉🏻 Saltos</h2>
+        <p>También podemos utilizar saltos de línea para separar elementos de texto así como saltos de contenido</p>
+        <p>Por ejemplo:</p>
+        <ul>
+          <li><code>br:</code> <span>Etiqueta para dar un salto de linea</span></li>
+          <li><code>hr:</code> <span>Etiqueta para dar un salto de contenido (agrega un línea)</span></li>
+        </ul>
+        <p>Algunos elementos consisten solo en una etiqueta única, que se utiliza generalmente para insertar/incrustar
+          algo en el documento en el lugar donde se le quiere incluir.</p>
+      </div>
+
+      <div class="content">
+        <h2>👉🏻 Texto preformateado: Etiquetas "pre" y "code".</h2>
+        <p>En el código HTML no se respetan los espacios en blanco ni los saltos de línea, de manera que son
+          interpretados como un único espacio en blanco entre palabras al escribirse en la página.</p>
+
+        <p>Sin embargo esto podemos cambiarlo mediante la etiqueta: <code>pre</code></p>
+
+        <pre>
+<code>&lt;pre&gt;
+Lista de elementos:
+  - Elemento 1
+  - Elemento 2
+  - Elemento 3
+&lt;/pre&gt;</code>
+        </pre>
+
+        <p>Resultado:</p>
+        <pre class="pre-none">
+Lista de elementos:
+  - Elemento 1
+  - Elemento 2
+  - Elemento 3
+        </pre>
+
+        <p>La etiqueta <code>code</code> da también al texto el mismo tipo de letra (courier), sin embargo no respeta ni
+          los espacios en blanco ni los saltos de línea. Veamos el mismo código anterior cambiando la etiqueta:</p>
+
+        <pre>
+<code>&lt;code&gt;
+  Lista de elementos:
+    - Elemento 1
+    - Elemento 2
+    - Elemento 3
+&lt;/code&gt;</code>
+        </pre>
+
+        <p>Resultado:</p>
+        <code class="code-none">Lista de elementos:
+  - Elemento 1
+  - Elemento 2
+  - Elemento 3</code>
+
+        <br><br>
+
+        <p>Aunque a veces se suelen utilizar ambas, ya que La etiqueta <code>code</code> añade un matiz semántico.
+          Indica a los
+          navegadores que el fragmento de código preformateado indica precisamente un código, y que no debe ser
+          interpretado como una etiqueta HTML.</p>
+
+        <pre>
+<code>&lt;pre&gt;
+  &lt;code&gt;
+    ...
+  &lt;/code&gt;
+&lt;/pre&gt;</code>
+  </pre>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <div class="content">
+        <h2>👉🏻 Listas</h2>
+        <p>En HTML podemos utilizar listas que permiten describir o enumerar elementos.</p>
+
+        <p>Las listas pueden ser de tipo:</p>
+        <ul>
+          <li><code>ul:</code> Lista desordenada: <br>
+            Los elementos de la lista no están ordenados y van precedidos por una viñeta (como ésta lista que estás
+            leyendo).</li>
+          <li><code>ol:</code> Lista ordenada: <br>
+            Los elementos de la lista van precedidos de una numeración, bien sea con números o con letras.</li>
+        </ul>
+
+        <p>Dentro de cada lista, puedes utilizar cualquier elemento <code>li</code> para definir un elemento de lista.
+        </p>
+
+        <p>Por Ejemplo:</p>
+
+        <p>👉🏻 Lista Ordenada:</p>
+        <ol>
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+        </ol>
+
+        <p>Podemos usar el atributo <code>&lt;ol start="6"&gt;&lt;/ol&gt;</code> para definir el orden inicial de la
+          lista.</p>
+        <ol start="6">
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+        </ol>
+
+        <p>Invertir el orden de la lista con el atributo <code>&lt;ol reversed="reversed"&gt;&lt;/ol&gt;</code></p>
+        <ol reversed="reversed">
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+        </ol>
+
+        <p>Cambiar el tipo de lista con el atributo <code>&lt;ol type="a"&gt;&lt;/ol&gt;</code></p>
+        <ol type="a">
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+        </ol>
+
+        <p>Sintaxis:</p>
+
+        <pre>
+<code>&lt;ol&gt;
+  &lt;li&gt;Elemento de lista 1&lt;/li&gt;
+  &lt;li&gt;Elemento de lista 2&lt;/li&gt;
+  &lt;li&gt;Elemento de lista 3&lt;/li&gt;
+&lt;/ol&gt;</code>
+        </pre>
+
+        <p>👉🏻 Lista Desordenada:</p>
+        <ul>
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+        </ul>
+
+        <p>Podemos usar el atributo <code>&lt;ul type="square"&gt;&lt;/ul&gt;</code> para definir el tipo de lista.</p>
+        <ul type="square">
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+          <li>Elemento de lista</li>
+        </ul>
+
+        <p>Sintaxis:</p>
+
+        <pre>
+<code>&lt;ul&gt;
+  &lt;li&gt;Elemento de lista 1&lt;/li&gt;
+  &lt;li&gt;Elemento de lista 2&lt;/li&gt;
+  &lt;li&gt;Elemento de lista 3&lt;/li&gt;
+&lt;/ul&gt;</code>
+        </pre>
+
+      </div>
+
+      <div class="content">
+        <h2>👉🏻 Tablas</h2>
+        <p>El lenguaje HTML permite la introducción de tablas en las páginas web. Para ello tiene una serie de etiquetas
+          especiales para construir las tablas. Sin embargo, antes de nada, y para evitar confusiones, vamos a definir
+          los elementos básicos de una tabla:</p>
+
+        <ul>
+          <li>Tabla: Espacio rectangular dividido por líneas horizontales y verticales de manera que se forman
+            diferentes compartimentos o casillas.</li>
+          <li>Fila: Cada una de las líneas horizontales de casillas de que consta la tabla.</li>
+          <li>Columna: Cada una de las líneas verticales de casillas de que consta la tabla.</li>
+          <li>Celda: Cada una de las casillas de la tabla</li>
+        </ul>
+
+        <p>Etiquetas básicas:</p>
+        <ul>
+          <li><code>table</code> Representa datos en dos o mas dimensiones.</li>
+          <li><code>tr</code> Define una fila de celdas en una tabla.</li>
+          <li><code>td</code> Define la celda de una tabla que contiene datos.</li>
+          <li><code>th</code> Define una celda como encabezado de un grupo de celdas en una tabla.</li>
+        </ul>
+
+        <p>Etiquetas adicionales:</p>
+        <ul>
+          <li><code>caption</code> Define un título para una tabla.</li>
+          <li><code>col</code> Define una columna de una tabla.</li>
+          <li><code>colgroup</code> Define un grupo de columnas de una tabla.</li>
+        </ul>
+
+        <p>Secciones para tablas:</p>
+        <ul>
+          <li><code>thead</code> Define el encabezado de una tabla.</li>
+          <li><code>tbody</code> Define el cuerpo de una tabla.</li>
+          <li><code>tfoot</code> Define el pie de una tabla.</li>
+        </ul>
+
+        <p>Sintaxis:</p>
+        <pre>
+<code>&lt;table&gt;
+  &lt;caption&gt;Título de la tabla&lt;/caption&gt;
+  &lt;col&gt;
+  &lt;colgroup&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Encabezado 1&lt;/th&gt;
+      &lt;th&gt;Encabezado 2&lt;/th&gt;
+      &lt;th&gt;Encabezado 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Celda 1&lt;/td&gt;
+      &lt;td&gt;Celda 2&lt;/td&gt;
+      &lt;td&gt;Celda 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Celda 1&lt;/td&gt;
+      &lt;td&gt;Celda 2&lt;/td&gt;
+      &lt;td&gt;Celda 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pie 1&lt;/td&gt;
+      &lt;td&gt;Pie 2&lt;/td&gt;
+      &lt;td&gt;Pie 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code>
+        </pre>
+
+        <p>Resultado:</p>
+        <table border="1">
+          <caption>Título de la tabla</caption>
+          <col>
+          <colgroup>
+          <thead>
+            <tr>
+              <th>Encabezado 1</th>
+              <th>Encabezado 2</th>
+              <th>Encabezado 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Celda 1</td>
+              <td>Celda 2</td>
+              <td>Celda 3</td>
+            </tr>
+            <tr>
+              <td>Celda 1</td>
+              <td>Celda 2</td>
+              <td>Celda 3</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Pie 1</td>
+              <td>Pie 2</td>
+              <td>Pie 3</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <p>Para más información sobre las tablas, puedes consultar la documentación en MDN <a href="https://developer.mozilla.org/es/docs/Learn/HTML/Tables/Basics" target="_blank">Tablas HTML</a></p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <div class="content">
+        <h2>👉🏻 Etiquetas de Estructura</h2>
+        <p>Además de definir partes individuales de tu página (como un párrafo o una imagen), HTML también dispone de
+          elementos de bloque que se pueden utilizar para estructurar las distintas áreas de tu sito web (tal como el
+          encabezado, el menú de navegación o la parte del contenido principal.</p>
+        <ul>
+          <li><code>header:</code> <span>Etiqueta para encabezado principal de la página.</span></li>
+          <li><code>footer:</code> <span>Etiqueta que representa un grupo de contenido al final de una página.</span>
+          </li>
+          <li><code>nav:</code> <span>Etiqueta para la navegación principal de la página</span></li>
+          <li><code>article:</code> <span>Etiqueta para un bloque de contenido que tiene sentido por sí mismo aparte del
+              resto de la página (por ejemplo una entrada en un blog).</span></li>
+          <li><code>section:</code> <span>Etiqueta para una sección en sí misma (por ejemplo un minimapa o un conjunto
+              de titulares y resúmenes).</span></li>
+          <li><code>aside:</code> <span>Etiqueta para contenido que no está directamente relacionado con el contenido
+              principal, pero que puede aportar información adicional relacionada indirectamente con él (resúmenes,
+              biografías del autor, enlaces relacionados, etc.).</span></li>
+          <li><code>main:</code> <span>Etiqueta que encierra el contenido principal de la página. Utilizar solamente una
+              vez para cada página y lo situaremos directamente dentro del elemento body. Es mejor que no lo anidemos en
+              otros elementos.</span></li>
+          <li><code>div:</code> <span>Etiqueta para contenido que no tiene semántica</span></li>
+        </ul>
+
+        <p>Para más información sobre las etiquetas de estructura, puedes visitar la <a
+            href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
+            target="_blank">Estructura web y documentación</a></p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <div class="content">
+
+        <h2>Especificación</h2>
+        <p><a href="https://html.spec.whatwg.org/" target="_blank">HTML Living Standard</a></p>
+
+        <h2>Manuales</h2>
+        <p>MDN (Mozilla) es el manual principal, con ejemplos y otras informaciones.</p>
+        <p>Se puede acceder en <a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML"
+            target="_blank">Introducción a HTML</a></p>
+        <p>Otra página para referencia de HTML es <a href="https://htmlreference.io/" target="_blank">htmlreference</a>
+        </p>
+
+        <h2>Referencias a entidades: Inclusión de caracteres especiales en HTML</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Caracter literal</th>
+              <th>Equivalente de referencia de caracteres</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;</code></td>
+              <td><code>&amp;lt;</code></td>
+            </tr>
+            <tr>
+              <td><code>&gt;</code></td>
+              <td><code>&amp;gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>&quot;</code></td>
+              <td><code>&amp;quot;</code></td>
+            </tr>
+            <tr>
+              <td><code>&apos;</code></td>
+              <td><code>&amp;apos;</code></td>
+            </tr>
+            <tr>
+              <td><code>&amp;</code></td>
+              <td><code>&amp;amp;</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
